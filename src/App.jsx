@@ -1,5 +1,6 @@
 import React from "react";
 import Button from "./components/Button";
+import NumberDisplay from "./components/NumberDisplay";
 
 export default function App() {
   const [count, setCount] = React.useState(0);
@@ -9,9 +10,7 @@ export default function App() {
         <Button handleClick={() => (count > 0 ? setCount((n) => n - 1) : null)}>
           -
         </Button>
-        <h1 className='-translate-y-7 text-4xl font-medium text-green-950'>
-          {count}
-        </h1>
+        <NumberDisplay count={count} />
         <Button
           handleClick={() => (count < 10 ? setCount((n) => n + 1) : null)}>
           +
