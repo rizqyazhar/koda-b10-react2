@@ -6,7 +6,7 @@ import Counter from "./components/Counter";
 export default function App() {
   const [count, setCount] = React.useState(0);
   return (
-    <div className='w-full min-h-dvh flex justify-center items-center bg-green-200'>
+    <main className='w-full min-h-dvh flex justify-center items-center bg-green-200'>
       <Counter>
         <Button handleClick={() => (count > 0 ? setCount((n) => n - 1) : null)}>
           -
@@ -17,6 +17,6 @@ export default function App() {
           +
         </Button>
       </Counter>
-    </div>
+    </main>
   );
 }
